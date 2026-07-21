@@ -1,10 +1,12 @@
 import axios from "axios";
 
+const host = window.location.hostname;
+
 const API = axios.create({
   baseURL:
-    window.location.hostname === "localhost"
+    host === "localhost"
       ? "http://localhost:8082/api"
-      : "https://YOUR-BACKEND-URL/api", // ngrok or deployed backend
+      : "http://192.168.1.100:8082/api",
 });
 
 API.interceptors.request.use((config) => {
