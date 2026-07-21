@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login-container {
+  height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/wallpaperflare.com_wallpaper.jpg);
+   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  margin-left: -130px;
+  margin-right: -120px;
+}
+
+.login-card {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #667eea77 0%, #764ba2 100%);
+  border: 3px solid rgba(255, 255, 255, 0.596);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
+}
+.login-card h1 {
+  color: #ffffff;
+  font-family: serif;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 28px; /* Adds space below the heading */
+  letter-spacing: 2px;
+}
+.login-card h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-card input {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.login-card input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.login-card button {
+  padding: 12px;
+  background: #245dd6dc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  width:120px ;
+  margin-left: 100px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.login-card button:hover {
+  background: #1d4ed8;
+}

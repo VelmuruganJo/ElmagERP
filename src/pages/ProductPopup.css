@@ -1,0 +1,197 @@
+/* ===========================
+   POPUP OVERLAY
+=========================== */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  width: 90vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 35px 80px ;
+
+  z-index: 9999;
+}
+
+/* ===========================
+   POPUP BOX
+=========================== */
+.popup-box {
+  background: #fff;
+  width: 95%;
+  max-width: 1000px;
+  max-height: 90vh;
+  overflow: hidden;
+
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.25);
+
+  display: flex;
+  flex-direction: column;
+
+  animation: popupFade .2s ease;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+.popup-header {
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 30px;
+
+  background: linear-gradient(135deg,#4f46e5,#7c3aed);
+  color: white;
+
+  z-index: 10;
+}
+
+.popup-header h2{
+  margin:0;
+  font-size:18px;
+  font-weight:600;
+  color:white;
+}
+
+.popup-close{
+  background:#ef4444;
+  color:#fff;
+  border:none;
+  width:20px;
+  height:20px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:12px;
+}
+
+.popup-close:hover{
+  background:#dc2626;
+}
+
+/* ===========================
+   BODY
+=========================== */
+.popup-table-container{
+  padding:15px 10px;
+  max-height:65vh;
+  overflow-y:auto;
+}
+
+/* ===========================
+   TABLE
+=========================== */
+.popup-table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:10px;
+}
+
+.popup-table thead th{
+  position:sticky;
+  top:0;
+
+  background:#4f46e5;
+  color:white;
+
+  padding:5px;
+  text-align:center;
+}
+
+.popup-table td{
+  padding:2px;
+  border-bottom:1px solid #000000;
+  border-left: 1px solid black;
+  text-align:center;
+  font-size:11px;
+  color: black;
+}
+
+.popup-table td:nth-child(4){
+  text-align:left;
+}
+
+.popup-table tbody tr:hover{
+  background:#eef2ff;
+}
+
+/* ===========================
+   STAGE BADGES
+=========================== */
+.stage-badge{
+  /* display:inline-block; */
+  padding:4px 10px;
+  border-radius:10px;
+  color:#fff;
+  font-size:10px;
+  font-weight:600;
+}
+
+.stage-copper{
+  background:#b87333;
+}
+
+.stage-assembly{
+  background:#16a34a;
+}
+
+.stage-packing{
+  background:#2563eb;
+}
+
+/* ===========================
+   FOOTER TOTAL
+=========================== */
+.popup-table tfoot td{
+  background:#f8fafc;
+  font-weight:bold;
+  font-size:12px;
+}
+
+/* ===========================
+   ACTIONS
+=========================== */
+.popup-footer{
+  display:flex;
+  justify-content:flex-end;
+  gap:10px;
+
+  padding:15px 20px;
+
+  border-top:1px solid #eee;
+  background:white;
+}
+
+.popup-footer .btn-cancel{
+  background:#ef4444;
+  color:white;
+  border:none;
+  padding:6px 18px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.popup-footer .btn-cancel:hover{
+  background:#dc2626;
+}
+
+/* ===========================
+   ANIMATION
+=========================== */
+@keyframes popupFade{
+  from{
+    transform:scale(.95);
+    opacity:0;
+  }
+  to{
+    transform:scale(1);
+    opacity:1;
+  }
+}

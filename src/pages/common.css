@@ -1,0 +1,341 @@
+/* ===============================
+   ELMEC ERP - COMMON CSS
+================================== */
+
+:root{
+    --primary:#1e40af;
+    --primary-dark:#0f2f7a;
+    --secondary:#2563eb;
+    --success:#16a34a;
+    --danger:#dc2626;
+    --warning:#f59e0b;
+    --purple:#7c3aed;
+
+    --white:#ffffff;
+    --bg:#f4f7fc;
+    --text:#1f2937;
+    --border:#dbe3ef;
+
+    --radius:12px;
+    --shadow:0 6px 18px rgba(0,0,0,.08);
+
+    --header-height:70px;
+    --sidebar-width:230px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+body{
+    background:var(--bg);
+}
+
+/* ================= PAGE ================= */
+
+.stock-page{
+    width:100%;
+    min-height:calc(100vh - var(--header-height));
+    background:white;
+    /* padding:25px; */
+}
+
+/* ================= PAGE TITLE ================= */
+
+.stock-page h2{
+    font-size:25px;
+    font-weight:800;
+    color:var(--primary-dark);
+    margin-bottom:5px;
+    position:relative;
+    /* padding-bottom:10px; */
+}
+
+/* ================= TOP BAR ================= */
+
+.top-bar{
+    display:flex;
+    flex-wrap:wrap;
+    gap:05px;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:5px;
+}
+
+/* ================= BUTTONS ================= */
+
+.stock-btn,
+.btn-save,
+.btn-export,
+.btn-cancel,
+.btn-delete{
+    border:none;
+    cursor:pointer;
+    color:#fff;
+    padding:4px 15px;
+    border-radius:10px;
+    font-size:10px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.stock-btn{
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+}
+
+.btn-save{
+    background:linear-gradient(135deg,#16a34a,#15803d);
+}
+
+.btn-export{
+    background:linear-gradient(135deg,#7c3aed,#6d28d9);
+}
+
+.btn-cancel,
+.btn-delete{
+    background:linear-gradient(135deg,#dc2626,#b91c1c);
+}
+
+.stock-btn:hover,
+.btn-save:hover,
+.btn-export:hover,
+.btn-cancel:hover,
+.btn-delete:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+/* ================= SEARCH ================= */
+
+.search-input{
+    flex:1;
+    min-width:280px;
+    padding:10px 25px;
+    border:1px solid var(--border);
+    border-radius:10px;
+    background:#fff;
+    font-size:10px;
+    font-weight: 600;
+    transition:.3s;
+    color: rgba(0, 0, 0, 0.897);
+}
+
+.search-input:focus{
+    outline:none;
+    border-color:#2563eb;
+    box-shadow:0 0 0 4px rgba(37,99,235,.15);
+}
+
+/* ================= FORM ================= */
+
+.stock-form{
+    background:#fff;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:3px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+    gap:5px;
+    margin-bottom:2px;
+}
+
+.form-input{
+    width:100%;
+    padding:8px;
+    border:1px solid var(--border);
+    border-radius:12px;
+    font-size:10px;
+}
+
+.form-input:focus{
+    outline:none;
+    border-color:#2563eb;
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+}
+
+/* ================= TABLE ================= */
+/* ================= TABLE ================= */
+
+.table-container{
+    width:100%;
+    height:calc(100vh - 180px);   /* Adjust as needed */
+    overflow-y:auto;
+    overflow-x:auto;
+    background:#fff;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.stock-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.stock-table thead th{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:linear-gradient(135deg,#1e40af,#2563eb);
+    color:#fff;
+    padding:6px;
+    font-size:11px;
+    text-align:center;
+}
+
+.stock-table td{
+    padding:1px 10px 1px 10px;
+    border-bottom:1px solid #000000;
+    border-left: 1px solid black;
+    color:#374151;
+    font-size:11px;
+}
+
+.stock-table tbody tr{
+    transition:.25s;
+}
+
+.stock-table tbody tr:nth-child(even){
+    background:#fafcff;
+}
+
+.stock-table tbody tr:hover{
+    background:#e8f0ff;
+}
+
+/* ================= STATUS ================= */
+
+.low-stock{
+    background:#fef3c7 !important;
+}
+
+.out-stock{
+    background:#fee2e2 !important;
+}
+
+/* ================= CSV ================= */
+
+.csv-top-upload{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+.csv-top-upload input{
+    padding:8px;
+    border:1px solid var(--border);
+    border-radius:8px;
+}
+
+.materialn{
+    text-align: left;
+    padding-left: 20px;
+
+    
+}
+/* ================= CARD ================= */
+
+.dashboard-card{
+    background:#fff;
+    border-radius:15px;
+    box-shadow:var(--shadow);
+    padding:25px;
+}
+
+/* ================= SCROLL ================= */
+
+::-webkit-scrollbar{
+    width:8px;
+    height:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#9ca3af;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#6b7280;
+}
+.csvbox{
+    border: 2px solid rgb(5, 0, 0);
+    padding: 5px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+.top-bar{
+    flex-direction:column;
+    align-items:stretch;
+}
+
+.search-input{
+    width:100%;
+}
+
+.stock-form{
+    grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+.stock-page{
+    padding:15px;
+}
+
+.stock-table{
+    min-width:900px;
+}
+
+.stock-btn,
+.btn-save,
+.btn-export,
+.btn-cancel{
+    width:100%;
+}
+
+}
+
+.filter-select{
+
+    min-width:220px;
+
+    padding:10px;
+
+    border:1px solid #000000;
+
+    border-radius:25px;
+
+    font-size:11px;
+
+    background:rgba(1, 225, 233, 0.527);
+
+    font-weight:600;
+    color: black;
+
+}
+
+.filter-select:focus{
+
+    outline:none;
+
+    border-color:#2563eb;
+
+}
+
+.stock-table tbody tr {
+    transition: 0.2s;
+}
+
+.stock-table tbody tr:hover {
+    background: #eef6ff;
+    cursor: pointer;
+}
